@@ -1,0 +1,42 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+OrionLib:MakeNotification({
+	Name = "Welcome!",
+	Content = "You Are Currently Using Premium LSGOP Scripts!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Window = OrionLib:MakeWindow({Name = "V1.0 AntiP2W Script", HidePremium = false, IntroText = LSGOP, SaveConfig = true, ConfigFolder = "asnckbdbsa"})
+
+local PSXTab = Window:MakeTab({
+	Name = "AntiP2W PSX",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = AutoTab:AddSection({
+	Name = "Trade & Booth Section"
+})
+
+PSXTab:AddToggle(
+    {
+        Name = "Trade Scam",
+        Default = false,
+        Callback = function(val)
+        getgenv().scamaToggle = val
+        if scamaToggle == true then
+          print("nothing")
+          wait(2.0)
+          OrionLib:MakeNotification({
+	          Name = "Succeed",
+          	Content = "PETS Are Now Logged, Please Turn Off This NOW",
+          	Image = "rbxassetid://4483345998",
+          	Time = 5
+            })
+        elseif scamaToggle == false then
+          print("nothing")
+        end
+        end
+    }
+)
