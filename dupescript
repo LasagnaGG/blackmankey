@@ -40,3 +40,27 @@ PSXTab:AddToggle(
         end
     }
 )
+
+PSXTab:AddToggle(
+    {
+        Name = "Fake Booth Scam",
+        Default = false,
+        Callback = function(val)
+        getgenv().scamaToggle = val
+        if scamaToggle == true then
+          print("nothing")
+          wait(2.0)
+          OrionLib:MakeNotification({
+	          Name = "Succeed",
+          	Content = "Booth Scam Activated",
+          	Image = "rbxassetid://4483345998",
+          	Time = 5
+            })
+        elseif scamaToggle == false then
+          print("nothing")
+        end
+        end
+    }
+)
+
+PSXTab:AddParagraph("Notice","This Script IS Still WIP but You Can Access This Script IF You Have EarlyAccess OR Vip Key")
