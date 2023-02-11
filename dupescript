@@ -15,7 +15,7 @@ local PSXTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = AutoTab:AddSection({
+local Section = PSXTab:AddSection({
 	Name = "Trade & Booth Section"
 })
 
